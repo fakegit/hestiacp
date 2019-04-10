@@ -18,6 +18,14 @@ What features does Hestia Control Panel support?
 * Mail Server (Exim/Dovecot) with Anti-Virus and Spam Filtering (ClamAV and SpamAssassin)
 * Database Server (MariaDB/PostgreSQL)
 
+How to support Hestia Control Panel:
+----------------------------
+Hestia Control Panel is open source and completely free for everyone to use.
+
+If you would like to help our developers cover their time and infrastucture costs, or to support the Hestia Control Panel project as a whole, please consider making a donation via PayPal.
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA)
+
 System Requirements:
 ----------------------------
 * Debian 8 or 9
@@ -55,11 +63,3 @@ Bug reports can be filed using GitHub's [Issues](https://github.com/hestiacp/hes
 License:
 ----------------------------
 Hestia Control Panel is licensed under [GPL v3](https://github.com/hestiacp/hestiacp/blob/master/LICENSE) license, and is based on VestaCP.<br>
-
-How to support Hestia Control Panel:
-----------------------------
-Hestia Control Panel is open source and completely free for everyone to use.
-
-If you would like to help our developers cover their time and infrastucture costs, or to support the Hestia Control Panel project as a whole, please consider making a donation via PayPal.
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA)
