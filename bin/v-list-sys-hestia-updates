@@ -92,6 +92,7 @@ else
     ARCH=$(echo "$dpkg_data"|grep Architecture |cut -f 2 -d ' ')
     VERSION=$(echo "$dpkg_data"|grep ^Version |cut -f 2 -d ' '|cut -f 1 -d \-)
     RELEASE=$(echo "$dpkg_data"|grep ^Version |cut -f 2 -d ' '|cut -f 2 -d \-)
+    RELEASE_B=$(echo $RELEASE_BRANCH)
     DATE=$(date -d @$pkg_date +"%F")
     TIME=$(date -d @$pkg_date +"%T")
 fi
