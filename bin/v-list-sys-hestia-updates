@@ -61,7 +61,19 @@ shell_list() {
 #----------------------------------------------------------#
 
 # Checking official latest version
-hestia_v=$(apt-cache policy hestia | grep Candidate | cut -d ':' -f 2 | xargs)
+if [ "$RELEASE_BRANCH" != "release" ]; then
+    branch_check=$(curl -s --head -w %{http_code} https://raw.githubusercontent.com/hestiacp/hestiacp/$RELEASE_BRANCH/src/deb/hestia/control -o /dev/null)
+    if [ $branch_check -ne "200" ]; then
+        echo "Error: invalid branch name specified."
+        exit 1
+    else
+        branch=$RELEASE_BRANCH
+    fi
+    hestia_v=$(curl -s https://raw.githubusercontent.com/hestiacp/hestiacp/$branch/src/deb/hestia/control | grep "Version:" | cut -d' ' -f2 | xargs)
+else
+    hestia_v=$(apt-cache policy hestia | grep Candidate | cut -d ':' -f 2 | xargs)
+fi
+
 nginx_v=$(apt-cache policy hestia-nginx | grep Candidate | cut -d ':' -f 2 | xargs)
 php_v=$(apt-cache policy hestia-php | grep Candidate | cut -d ':' -f 2 | xargs)
 
