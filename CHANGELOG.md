@@ -1,29 +1,29 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [CURRENT] - Development
+## [1.0.5] - 2019-08-06 - Hotfix
 ### Features
-- Added read only/demo mode function if DEMO_MODE is set to yes in hestia.conf.
+- Added demo / read only mode function to the system; this can be enabled by setting `DEMO_MODE='yes'` in hestia.conf.
 - Added php-imagick module to installer and upgrade scripts.
 - Added recidive filter function to fail2ban.
-- Refactored MultiPHP functionality. MultiPHP will be enabled by default on new installations.
-- Allowed admin user to add or remove PHP versions from webui (edit/server->"Web Server" page).
+- Refactored Multi-PHP functionality. Support for PHP version selection will be enabled by default on new installations.
+- Allowed admin user to add or remove PHP versions from Control Panel UI (available from Server > Configure > Web Server).
 
 ### Bugfixes
-- Added a detection of web root for add .well-known ACME challenge.
-- Reworked Let's Encrypt ACME staging to use hestia conform standard.
-- Fixed if condition, use Nginx for Let's Encrypt ACME request if present.
+- Added detection of web root for .well-known ACME challenge.
+- Reworked Let's Encrypt ACME staging to use Hestia functions.
+- Fixed if condition to use Nginx for Let's Encrypt ACME request if present.
 - Reworked v-add-sys-ip, removed CentOS/Red Hat support and reworked conditions.
-- Enabled HSTS and force SSL on v-add-letsencrypt-host.
+- Enabled HSTS and force SSL in v-add-letsencrypt-host.
 - Prevented login action for webmail in list user view.
-- Removed hardcoded mail in HELO data (cosmetic fix).
+- Removed hardcoded mail subdomain in exim HELO data (cosmetic fix).
 - Fixed SFTP server validation check, thanks to @dbannik!
-- Implemented warning message for creating web domains under admin user.
+- Implemented warning message when creating web domains under admin user.
 - v-generate-api-key: Fixed wrong quotes used for default keys folder location.
 - Fixed permissions to allow access for FTP users created in web domains under admin account.
-- Removed obsolete Vesta Filemanager files completely.
-- Check if user home exists before set permission on sftp jail.
-- Fix several security issues, thanks to Andrea Cardaci (https://cardaci.xyz/)
+- Removed left over file manager code from VestaCP.
+- Check if user home directory exists before setting SFTP jail permissions.
+- Fixed security issue in v-list-user, thanks to Andrea Cardaci for collaborating with us (https://cardaci.xyz/).
 
 ## [1.0.4] - 2019-07-09 - Hotfix
 ### Bugfixes
@@ -58,11 +58,7 @@ All notable changes to this project will be documented in this file.
 - Fixed an issue where another website would load if browsing to a non-SSL enabled domaing using HTTPS.
 
 ## [1.0.0-190618] - 2019-06-25
-### Features
-- 
-
-### Bugfixes
-- 
+- Please see release notes for [1.0.1].
 
 ## [0.9.8-28] - 2019-05-16
 ### Features
@@ -73,6 +69,7 @@ All notable changes to this project will be documented in this file.
 
 
 [CURRENT]: https://github.com/hestiacp/hestiacp
+[1.0.5]: https://github.com/hestiacp/hestiacp/releases/tag/1.0.5
 [1.0.4]: https://github.com/hestiacp/hestiacp/releases/tag/1.0.4
 [1.0.3]: https://github.com/hestiacp/hestiacp/releases/tag/1.0.3
 [1.0.1]: https://github.com/hestiacp/hestiacp/releases/tag/1.0.1
