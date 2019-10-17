@@ -237,7 +237,7 @@ done
 set_default_value 'nginx' 'yes'
 set_default_value 'apache' 'yes'
 set_default_value 'phpfpm' 'no'
-set_default_value 'multiphp' 'no'
+set_default_value 'multiphp' 'yes'
 set_default_value 'vsftpd' 'yes'
 set_default_value 'proftpd' 'no'
 set_default_value 'named' 'yes'
